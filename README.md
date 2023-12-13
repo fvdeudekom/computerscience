@@ -14,7 +14,8 @@ A signature matrix is formed afterwards using min hashing.
 The candidate matrix is formed based on the values in the signature matrix. 
 If two observations are in the same bucket for at least one band, they are marked as candidates. 
 
-This candidates are evaluated as duplicates based on the jaccard similarity. 
+This candidates are evaluated as duplicates based on the jaccard similarity.
+Also, candidates that have the same shop or have different brands are considered non-duplicates.
 The threshold of similarity is tuned in the training and used in the testing part. 
 The tuning was based on TP, FP, FN, and TN (or recall and precision). 
 
